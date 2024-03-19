@@ -3,9 +3,9 @@ const cors =  require('cors');
 const morgan =  require('morgan');
 const path = require('path');
 const app = express();
-const dataBaseConnection = require('./dataBaseConnection.js')
-const userRouters = require('./routes/UserRoutes.js');
+const dataBaseConnection = require('./dataBaseConnection.js');
 const UserRoutes = require('./routes/UserRoutes.js');
+const ProductsRutes = require('./routes/ProductRoutes');
 
 //1
 //CONFIGURACION PARA LAS VARIABLES DE ENTORNO
@@ -47,3 +47,4 @@ app.get('/test', async(req, res, next)=>{
     }
 })
 UserRoutes('/users', app)
+ProductsRutes('/products',app)

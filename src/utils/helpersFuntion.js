@@ -8,5 +8,25 @@ function ValidateEmail(candidateEmail){
 function ValidatePassword(candidatePassword){
     return regexPassword.test(candidatePassword);
 }
-
-module.exports={ValidateEmail, ValidatePassword};
+function validateTitle(title){
+    if (title.length>=4 && title.length<=20) {
+        return true;
+    } else {
+        return false;
+    }
+}
+function validateDescription(str){
+    if (str.length>=4 && str.length<=200) {
+        return true;
+    } else {
+        return false;
+    }
+}
+function validateCategory(str){
+    if (str!==undefined) {
+        return true;
+    } else {
+        return false;
+    }
+}
+module.exports={ValidateEmail, ValidatePassword, validateTitle, validateDescription, validateCategory};
